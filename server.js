@@ -5,29 +5,10 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  // res.send('<h1>Hello Express!</h1>');
-    res.send({
-        fname: 'Katalin',
-        lname: 'Kovacs',
-        likes: [
-            'Running',
-            'Drinking',
-            'Doing nothing'
-        ],
-        notlikes: [
-            'working',
-            'programming'
-        ]
-    });
+   res.send('<h1>Welcome!</h1>');
+
 });
 
-app.get('/about', (req, res) => {
-  res.send('About Page');
-});
-
-app.get('/kati', (req, res) => {
-    res.send('Kati Page');
-});
 
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
@@ -35,6 +16,7 @@ app.get('/bad', (req, res) => {
     errorMessage: 'Unable to handle request'
   });
 });
+
 
 app.listen(3000, () => {
   console.log('Server is up on port 3000');
