@@ -1,10 +1,7 @@
-/*const express = require('express');*/
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var express = require('express');
 var app = express();
-
-var path = require('path');
-var engines = require('consolidate')
 var RUN_PORT = 8080;
 
 
@@ -18,9 +15,9 @@ app.use(express.static(__dirname + '/public'));
 //app.use(express.static(path.join(__dirname, 'public')));
 
 
-//index.html routing
+//some.html routing
 app.get('/', function(req, res){
-    res.render("welcome.html");
+    res.render("blue.html");
 });
 
 /*app.get('/', (req, res) => {
